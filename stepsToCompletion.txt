@@ -1,0 +1,8 @@
+Pages I need
+
+* Login Page
+* Register Page
+* Posts Page
+* Sinple Poost
+* Add a post Page
+* Profile page

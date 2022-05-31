@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app a {
+  padding: 10px
+
+}
+
+.title{
+  text-align: center;
+  font-size: 50px;
+  background-color: aquamarine;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+
+a:hover{
+  color: red;
+}
+
+a:link {
+  color: aquamarine;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+
+/* .card1{
+  background: aquamarine;
+  padding: 50px;
+  border: 1px solid black;
+  border-radius: .25rem;
+  margin: 50px 50px 50px 50px;
+  text-align: center;
+} */
+
+.homePageIntro{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.homePageDes{
+  text-align: center;
+  color: grey;
+}
+
+.searchBar{
+  text-align: center;
+  padding-top: 10px;
+}
