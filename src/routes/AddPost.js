@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Input } from '@chakra-ui/react'
+// import { Input } from '@chakra-ui/react';
 
 
 const AddPost = ({token}) => {
-  console.log(token);
-const [data, setData] = useState({username: "", title: "", description: "", price: ""})
+const [data, setData] = useState({title: "", description: "", price: ""})
   function handle(e) {
     const newInfo = { ...data };
     newInfo[e.target.id] = e.target.value;
@@ -18,11 +17,10 @@ const [data, setData] = useState({username: "", title: "", description: "", pric
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
           post: {
-            username: data.username,
             title: data.title,
             price: data.price,
             description: data.description,
@@ -43,7 +41,6 @@ const [data, setData] = useState({username: "", title: "", description: "", pric
             Create a Post
         </h3>
         <form onSubmit={(e) => handleSubmit(e)}>
-          <input onChange={(e) => handle(e)} placeholder="username" id="username" value={data.username} type="text"></input>
           <input onChange={(e) => handle(e)} placeholder="title" id="title" value={data.title} type="text"></input>
           <input onChange={(e) => handle(e)} placeholder="description" id="description" value={data.description} type="text"></input>
           <input onChange={(e) => handle(e)} placeholder="price" id="price" value={data.price} type="text"></input>

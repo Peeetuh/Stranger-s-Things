@@ -79,11 +79,3 @@ const LoginForm = ({setToken}) => {
         }
 
 export default LoginForm;
-
-// <form onSubmit={loginUser}>
-//             <label>Username</label>
-//             <input value={username} onChange={(e) => setUsername(e.target.value)}/>
-//             <label>Password</label>
-//             <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-//             <button type='submit'>Submit</button>
-//         </form>

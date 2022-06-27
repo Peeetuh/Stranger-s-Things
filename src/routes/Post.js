@@ -7,9 +7,10 @@ import {
   } from '@chakra-ui/react';
 import { useEffect, React, useState } from "react";
 import { Link } from "react-router-dom";
+import deletePost from '../Components/DeletePost'
 
 
-const Post = ({posts, setPosts}) => {
+const Post = ({posts, setPosts, token}) => {
   const [APIData, setAPIData] = useState([])
   const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
@@ -65,6 +66,11 @@ const Post = ({posts, setPosts}) => {
                     p={6}
                     overflow={'hidden'}>
                     <Stack>
+                  <Text fontWeight={1000}
+                        fontSize = {'large'}
+                  >
+                    {title}
+                  </Text>
                   <Text
                         color={'green.500'}
                         textTransform={'uppercase'}
@@ -73,13 +79,6 @@ const Post = ({posts, setPosts}) => {
                         letterSpacing={1.1}>
                         {price}
                   </Text>
-                  <Link to={`/SinglePost/${_id}`}>
-                  <Heading
-                        fontSize={'2xl'}
-                        fontFamily={'body'}>
-                        {title}
-                   </Heading>
-                   </Link>
                       <Text color={'gray.500'}>
                         {description}
                       </Text>
@@ -87,6 +86,13 @@ const Post = ({posts, setPosts}) => {
                   <Stack mt={6} direction={'column'} spacing={4} align={'center'}>
                     <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                       <Text alignItems={'center'} fontWeight={600}>{author.username}</Text>
+                      {token && author && (
+                      <button
+                      onClick={() => deletePost(token, _id)}
+                      >
+                        Delete
+                      </button>
+                      )}
                     </Stack>
                   </Stack>
       </Box>

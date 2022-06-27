@@ -8,16 +8,15 @@ import {
     Stack,
     Image,
   } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const AuthForm = ({setToken}) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
     const registerUser = async (event) =>{
         event.preventDefault();
         const response = await fetch(
-            'https://strangers-things.herokuapp.com/api/2202-FTB-HY-WEB-PT/users/register',
+            'https://strangers-things.herokuapp.com/api/2202-FTB-PT-WEB-PT/users/register',
             {
                 method: "POST",
                 headers: {
@@ -81,23 +80,6 @@ const AuthForm = ({setToken}) => {
     </Stack>
   );
 }
-        // <form onSubmit={registerUser}>
-        //     <label>Username</label>
-        //     <input value={username} onChange={(e) => setUsername(e.target.value)}/>
-        //     <label>Password</label>
-        //     <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-        //     <button type='submit'>Submit</button>
-        // </form
-
-
-
-/* <FormControl id="username">
-<FormLabel>Username</FormLabel>
-<Input type="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-</FormControl>
-<FormControl id="username">
-<FormLabel>Password</FormLabel>
-<Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-</FormControl> */
+       
 
 export default AuthForm;
