@@ -34,7 +34,7 @@ function App() {
       <Routes>
           <Route path="Home" element={<Home />} />
           <Route path="profile" element={<Profile token={token}/>} />
-          <Route path="Post" element={<Post posts={posts} setPosts={setPosts}/>} />
+          <Route path="Post" element={<Post posts={posts} setPosts={setPosts} token={token}/>} />
           <Route path="AddPost" element={<AddPost token={token}/>} />
           <Route path="register" element={<Register setToken={setToken}/>} />
           <Route path="login" element={<Login setToken={setToken}/>} />
