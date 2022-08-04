@@ -17,7 +17,7 @@ const LoginForm = ({setToken}) => {
     const loginUser = async (event) =>{
         event.preventDefault();
         const response = await fetch(
-            'https://strangers-things.herokuapp.com/api/2202-FTB-HY-WEB-PT/users/login',
+            'https://strangers-things.herokuapp.com/api/2202-FTB-PT-WEB-PT/users/login',
             {
                 method: "POST",
                 headers: {

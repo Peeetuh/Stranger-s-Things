@@ -23,7 +23,7 @@ function App() {
           paddingBottom: "1rem",
         }}
       > 
-      <Link className="link" to="/Home">Home</Link> {" "}
+      <Link className="link" to="/">Home</Link> {" "}
         {!token ? <Link className="link" to="/login">Login</Link> : null}
         {!token ? <Link className="link" to="/register">Register</Link> : null}
         <Link className="link" to="/Post">Post</Link> {" "}
@@ -32,7 +32,7 @@ function App() {
         {token ? <button onClick={() => logout(setToken)}>Logout</button> : null}
       </nav>
       <Routes>
-          <Route path="Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="profile" element={<Profile token={token}/>} />
           <Route path="Post" element={<Post posts={posts} setPosts={setPosts} token={token}/>} />
           <Route path="AddPost" element={<AddPost token={token}/>} />

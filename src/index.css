@@ -74,3 +74,8 @@ nav {
   text-align: center;
   padding-top: 10px;
 }
+
+.delete-btn{
+  background-color: red;
+  color: white
+}

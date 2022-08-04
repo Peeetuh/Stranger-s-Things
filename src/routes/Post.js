@@ -1,12 +1,10 @@
 import {
     Box,
     Center,
-    Heading,
     Text,
     Stack,
   } from '@chakra-ui/react';
 import { useEffect, React, useState } from "react";
-import { Link } from "react-router-dom";
 import deletePost from '../Components/DeletePost'
 
 
@@ -87,7 +85,7 @@ const Post = ({posts, setPosts, token}) => {
                     <Stack direction={'column'} spacing={0} fontSize={'sm'}>
                       <Text alignItems={'center'} fontWeight={600}>{author.username}</Text>
                       {token && author && (
-                      <button
+                      <button className="delete-btn"
                       onClick={() => deletePost(token, _id)}
                       >
                         Delete
