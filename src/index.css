@@ -31,8 +31,12 @@ a:hover{
   color: red;
 }
 
+a:visited{
+  color:black;
+}
+
 a:link {
-  color: aquamarine;
+  color: black;
 }
 
 .link{
